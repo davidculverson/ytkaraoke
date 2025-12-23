@@ -4,6 +4,7 @@
 
 "use client"
 
+import { api } from "@/convex/_generated/api"
 import { Button } from "@/components/ui/button"
 import {
     Card,
@@ -12,17 +13,35 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
+import { useQuery } from "convex/react"
 import { FaYoutube } from "react-icons/fa"
 
 interface YouTubePremiumSetupProps {
-    onConnect: () => void
-    isConnected: boolean
+    roomId?: string
+    onConnect?: () => void
+    onContinue?: () => void
 }
 
 export function YouTubePremiumSetup({
+    roomId,
     onConnect,
-    isConnected,
+    onContinue,
 }: YouTubePremiumSetupProps) {
+    const youtubeAuth = useQuery(api.youtubePremium.getYouTubeAuth)
+    const isConnected = youtubeAuth?.hasAuth && !youtubeAuth?.isExpired
+
+    const handleConnect = () => {
+        if (onConnect) {
+            onConnect()
+        } else {
+            // Default: redirect to OAuth flow
+            const url = roomId 
+                ? `/api/youtube/auth?roomId=${roomId}`
+                : `/api/youtube/auth`
+            window.location.href = url
+        }
+    }
+
     return (
         <Card>
             <CardHeader>
@@ -54,14 +73,21 @@ export function YouTubePremiumSetup({
                 </div>
 
                 {isConnected ? (
-                    <div className="p-3 bg-green-50 dark:bg-green-950 rounded-md">
-                        <p className="text-sm text-green-700 dark:text-green-300 flex items-center gap-2">
-                            ✓ YouTube Premium Connected
-                        </p>
+                    <div className="space-y-3">
+                        <div className="p-3 bg-green-50 dark:bg-green-950 rounded-md">
+                            <p className="text-sm text-green-700 dark:text-green-300 flex items-center gap-2">
+                                ✓ YouTube Premium Connected
+                            </p>
+                        </div>
+                        {onContinue && (
+                            <Button onClick={onContinue} className="w-full">
+                                Continue to Player
+                            </Button>
+                        )}
                     </div>
                 ) : (
                     <Button
-                        onClick={onConnect}
+                        onClick={handleConnect}
                         className="w-full bg-red-600 hover:bg-red-700"
                     >
                         <FaYoutube className="mr-2" />

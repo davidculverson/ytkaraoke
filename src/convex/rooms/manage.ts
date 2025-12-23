@@ -17,6 +17,9 @@ export const createRoom = mutation({
                 }),
             ),
         ),
+        playbackMode: v.optional(
+            v.union(v.literal("embed"), v.literal("youtube-premium")),
+        ),
     },
     handler: async (ctx, args) => {
         const userId = await getAuthUserId(ctx)
@@ -42,6 +45,7 @@ export const createRoom = mutation({
             settings: {
                 maxSongsPerUser: args.maxSongsPerUser,
             },
+            playbackMode: args.playbackMode ?? "embed",
         })
 
         if (args.fallbackSongs) {

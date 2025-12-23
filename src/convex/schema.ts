@@ -39,6 +39,10 @@ export default defineSchema({
         settings: v.object({
             maxSongsPerUser: v.number(),
         }),
+        // YouTube Premium playback mode
+        playbackMode: v.optional(
+            v.union(v.literal("embed"), v.literal("youtube-premium")),
+        ),
     })
         .index("by_code", ["code"])
         .index("by_host", ["host"])
@@ -49,4 +53,25 @@ export default defineSchema({
     })
         .index("by_room_type", ["room", "type"])
         .index("by_added_by_room", ["addedBy", "room"]),
+
+    // YouTube Premium OAuth tokens storage
+    youtubeAuth: defineTable({
+        userId: v.id("users"),
+        accessToken: v.string(),
+        refreshToken: v.string(),
+        expiresAt: v.number(),
+        tokenType: v.string(),
+    }).index("by_user", ["userId"]),
+
+    // YouTube Premium session tracking (playlist per room)
+    youtubeSessions: defineTable({
+        roomId: v.id("rooms"),
+        hostUserId: v.id("users"),
+        playlistId: v.string(),
+        playlistTitle: v.string(),
+        createdAt: v.number(),
+        lastSyncedAt: v.number(),
+    })
+        .index("by_room", ["roomId"])
+        .index("by_host", ["hostUserId"]),
 })
