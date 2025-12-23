@@ -1,0 +1,9 @@
+<step title="Incoming Request" date="2025-12-23T01:43:25.460" instance="f8c5d3" url="/api/deployments/latest" method="GET" type="request" pid="833,1,24" Accept="*/*" Host="songup-karaoke-eltbyspbfuopy.scm.azurewebsites.net" User-Agent="AZURECLI/2.81.0 (MSI)" Accept-Encoding="gzip, deflate" Authorization="Bas..." x-ms-client-request-id="a8c65595-dfa0-11f0-b101-d36637c65265" X-ARR-LOG-ID="a8c65595-dfa0-11f0-b101-d36637c65265" CLIENT-IP="1.145.116.128:1381" X-SITE-DEPLOYMENT-ID="songup-karaoke-eltbyspbfuopy" WAS-DEFAULT-HOSTNAME="songup-karaoke-eltbyspbfuopy.scm.azurewebsites.net" X-Forwarded-Proto="https" X-AppService-Proto="https" X-Forwarded-TlsVersion="1.3" X-WAWS-Unencoded-URL="/api/deployments/latest" X-Client-IP="1.145.116.128" X-Client-Port="1381" >
+  <step title="Cleanup Xml Logs" date="2025-12-23T01:43:25.480" /><!-- duration: 31ms -->
+  <step title="DeploymentService.GetResult" date="2025-12-23T01:43:25.800" >
+    <step title="DeploymentService.GetLatestDeployment" date="2025-12-23T01:43:25.802" >
+      <step title="DeploymentManager.GetResults" date="2025-12-23T01:43:25.812" /><!-- duration: 440ms -->
+    </step><!-- duration: 470ms -->
+  </step><!-- duration: 484ms -->
+  <step title="Outgoing response" date="2025-12-23T01:43:26.334" type="response" statusCode="202" statusText="Accepted" /><!-- duration: 29ms -->
+</step><!-- duration: 915ms -->

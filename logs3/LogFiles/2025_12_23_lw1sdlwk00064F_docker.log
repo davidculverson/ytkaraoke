@@ -1,0 +1,138 @@
+2025-12-23T01:36:37.3250231Z Container start method called.
+2025-12-23T01:36:37.3475105Z Establishing network.
+2025-12-23T01:36:37.3562441Z Pulling image: appsvc/node:22-lts_20251016.4.tuxprod.
+2025-12-23T01:36:37.9707187Z Container is starting.
+2025-12-23T01:36:37.9721085Z Establishing user namespace if not established already.
+2025-12-23T01:36:37.9727783Z Establishing network if not established already.
+2025-12-23T01:36:37.9808017Z Mounting volumes.
+2025-12-23T01:36:37.9919485Z Nested mountpoint 
+2025-12-23T01:36:38.0509692Z Nested mountpoint volatile/logs
+2025-12-23T01:36:38.0808893Z Nested mountpoint 
+2025-12-23T01:36:38.1518746Z Nested mountpoint 
+2025-12-23T01:36:38.1829992Z Nested mountpoint 
+2025-12-23T01:36:38.7191679Z Creating container.
+2025-12-23T01:36:38.7206663Z Creating pipes for streaming container io.
+2025-12-23T01:36:38.7307568Z Creating stdout named pipe at /podr/container/pipe/1fe9e7521fe1_songup-karaoke-eltbyspbfuopy/stdout_179cdb1e08104b9cb540be72f1a21e1c.
+2025-12-23T01:36:38.7385223Z Successfully created stdout named pipe at: /podr/container/pipe/1fe9e7521fe1_songup-karaoke-eltbyspbfuopy/stdout_179cdb1e08104b9cb540be72f1a21e1c.
+2025-12-23T01:36:38.7401569Z Opening named pipe /podr/container/pipe/1fe9e7521fe1_songup-karaoke-eltbyspbfuopy/stdout_179cdb1e08104b9cb540be72f1a21e1c for reading in non-blocking mode.
+2025-12-23T01:36:38.7408313Z Successfully opened named pipe: /podr/container/pipe/1fe9e7521fe1_songup-karaoke-eltbyspbfuopy/stdout_179cdb1e08104b9cb540be72f1a21e1c.
+2025-12-23T01:36:38.7486672Z Successfully removed non-blocking flag from /podr/container/pipe/1fe9e7521fe1_songup-karaoke-eltbyspbfuopy/stdout_179cdb1e08104b9cb540be72f1a21e1c.
+2025-12-23T01:36:38.7493144Z Creating stderr named pipe at /podr/container/pipe/1fe9e7521fe1_songup-karaoke-eltbyspbfuopy/stderr_9eebabb1e6bf4fa4b0c84d868f6fb3aa.
+2025-12-23T01:36:38.7504363Z Successfully created stderr named pipe at: /podr/container/pipe/1fe9e7521fe1_songup-karaoke-eltbyspbfuopy/stderr_9eebabb1e6bf4fa4b0c84d868f6fb3aa.
+2025-12-23T01:36:38.7591483Z Opening named pipe /podr/container/pipe/1fe9e7521fe1_songup-karaoke-eltbyspbfuopy/stderr_9eebabb1e6bf4fa4b0c84d868f6fb3aa for reading in non-blocking mode.
+2025-12-23T01:36:38.7601285Z Successfully opened named pipe: /podr/container/pipe/1fe9e7521fe1_songup-karaoke-eltbyspbfuopy/stderr_9eebabb1e6bf4fa4b0c84d868f6fb3aa.
+2025-12-23T01:36:38.7604605Z Successfully removed non-blocking flag from /podr/container/pipe/1fe9e7521fe1_songup-karaoke-eltbyspbfuopy/stderr_9eebabb1e6bf4fa4b0c84d868f6fb3aa.
+2025-12-23T01:36:38.7795039Z Creating container with image: appsvc/node:22-lts_20251016.4.tuxprod from registry: 10.1.0.6:13209 and fully qualified image name: 10.1.0.6:13209/appsvc/node:22-lts_20251016.4.tuxprod
+2025-12-23T01:36:40.5507506Z Starting container: 1fe9e7521fe1_songup-karaoke-eltbyspbfuopy.
+2025-12-23T01:36:40.8299896Z Starting watchers and probes.
+2025-12-23T01:36:40.9633538Z Starting metrics collection.
+2025-12-23T01:36:41.0637944Z Container is running.
+2025-12-23T01:36:44.2209790Z Container start method finished after 6894 ms.
+2025-12-23T01:37:35.9005425Z Container get mounts received unexpected exception.
+2025-12-23T01:37:35.9701065Z Container get mounts received unexpected exception.
+2025-12-23T01:37:35.9916486Z Container has finished running with exit code: 1.
+2025-12-23T01:37:36.1696191Z Container is terminating. Grace period: 5 seconds.
+2025-12-23T01:37:36.4399031Z Stop and delete container. Retry count = 0
+2025-12-23T01:37:36.4511190Z Stopping container: 1fe9e7521fe1_songup-karaoke-eltbyspbfuopy.
+2025-12-23T01:37:37.4258615Z Deleting container: 1fe9e7521fe1_songup-karaoke-eltbyspbfuopy. Retry count = 0
+2025-12-23T01:37:38.7980406Z Container spec TerminationMessagePolicy  path 
+2025-12-23T01:37:38.8470432Z Container is terminated. Total time elapsed: 2565 ms.
+2025-12-23T01:37:38.8760030Z Site container: songup-karaoke-eltbyspbfuopy terminated during site startup.
+2025-12-23T01:37:39.1161569Z Site startup probe failed after 54.6572634 seconds.
+2025-12-23T01:37:39.9204586Z Failed to start site. Revert by stopping site.
+2025-12-23T01:37:40.1002155Z Site: songup-karaoke-eltbyspbfuopy stopped.
+2025-12-23T01:37:46.2272073Z Container start method called.
+2025-12-23T01:37:46.2337294Z Establishing network.
+2025-12-23T01:37:46.2339515Z Pulling image: appsvc/node:22-lts_20251016.4.tuxprod.
+2025-12-23T01:37:46.8212221Z Container is starting.
+2025-12-23T01:37:46.8225707Z Establishing user namespace if not established already.
+2025-12-23T01:37:46.8231248Z Establishing network if not established already.
+2025-12-23T01:37:46.8325288Z Mounting volumes.
+2025-12-23T01:37:46.8410755Z Nested mountpoint 
+2025-12-23T01:37:46.8912155Z Nested mountpoint volatile/logs
+2025-12-23T01:37:46.9302159Z Nested mountpoint 
+2025-12-23T01:37:47.0179270Z Nested mountpoint 
+2025-12-23T01:37:47.0681449Z Nested mountpoint 
+2025-12-23T01:37:47.7062287Z Creating container.
+2025-12-23T01:37:47.7063906Z Creating pipes for streaming container io.
+2025-12-23T01:37:47.7065144Z Creating stdout named pipe at /podr/container/pipe/e871edc79ab1_songup-karaoke-eltbyspbfuopy/stdout_6c275fd388d54b0bb9c057200c2968b6.
+2025-12-23T01:37:47.7067782Z Successfully created stdout named pipe at: /podr/container/pipe/e871edc79ab1_songup-karaoke-eltbyspbfuopy/stdout_6c275fd388d54b0bb9c057200c2968b6.
+2025-12-23T01:37:47.7069003Z Opening named pipe /podr/container/pipe/e871edc79ab1_songup-karaoke-eltbyspbfuopy/stdout_6c275fd388d54b0bb9c057200c2968b6 for reading in non-blocking mode.
+2025-12-23T01:37:47.7070449Z Successfully opened named pipe: /podr/container/pipe/e871edc79ab1_songup-karaoke-eltbyspbfuopy/stdout_6c275fd388d54b0bb9c057200c2968b6.
+2025-12-23T01:37:47.7071584Z Successfully removed non-blocking flag from /podr/container/pipe/e871edc79ab1_songup-karaoke-eltbyspbfuopy/stdout_6c275fd388d54b0bb9c057200c2968b6.
+2025-12-23T01:37:47.7072914Z Creating stderr named pipe at /podr/container/pipe/e871edc79ab1_songup-karaoke-eltbyspbfuopy/stderr_cde7303392cf4fdeb71d117d5a39ad67.
+2025-12-23T01:37:47.7246208Z Successfully created stderr named pipe at: /podr/container/pipe/e871edc79ab1_songup-karaoke-eltbyspbfuopy/stderr_cde7303392cf4fdeb71d117d5a39ad67.
+2025-12-23T01:37:47.7250540Z Opening named pipe /podr/container/pipe/e871edc79ab1_songup-karaoke-eltbyspbfuopy/stderr_cde7303392cf4fdeb71d117d5a39ad67 for reading in non-blocking mode.
+2025-12-23T01:37:47.7274477Z Successfully opened named pipe: /podr/container/pipe/e871edc79ab1_songup-karaoke-eltbyspbfuopy/stderr_cde7303392cf4fdeb71d117d5a39ad67.
+2025-12-23T01:37:47.7456385Z Successfully removed non-blocking flag from /podr/container/pipe/e871edc79ab1_songup-karaoke-eltbyspbfuopy/stderr_cde7303392cf4fdeb71d117d5a39ad67.
+2025-12-23T01:37:47.7459933Z Creating container with image: appsvc/node:22-lts_20251016.4.tuxprod from registry: 10.1.0.6:13209 and fully qualified image name: 10.1.0.6:13209/appsvc/node:22-lts_20251016.4.tuxprod
+2025-12-23T01:37:49.0405880Z Starting container: e871edc79ab1_songup-karaoke-eltbyspbfuopy.
+2025-12-23T01:37:49.2262149Z Starting watchers and probes.
+2025-12-23T01:37:49.2473757Z Starting metrics collection.
+2025-12-23T01:37:49.2763278Z Container is running.
+2025-12-23T01:37:50.4312817Z Container start method finished after 4197 ms.
+2025-12-23T01:38:49.9719531Z Container has finished running with exit code: 1.
+2025-12-23T01:38:49.9720738Z Container is terminating. Grace period: 5 seconds.
+2025-12-23T01:38:49.9802961Z Stop and delete container. Retry count = 0
+2025-12-23T01:38:49.9811830Z Stopping container: e871edc79ab1_songup-karaoke-eltbyspbfuopy.
+2025-12-23T01:38:50.1713006Z Deleting container: e871edc79ab1_songup-karaoke-eltbyspbfuopy. Retry count = 0
+2025-12-23T01:38:50.3809747Z Container spec TerminationMessagePolicy  path 
+2025-12-23T01:38:50.3895377Z Container is terminated. Total time elapsed: 409 ms.
+2025-12-23T01:38:50.3908066Z Site container: songup-karaoke-eltbyspbfuopy terminated during site startup.
+2025-12-23T01:38:50.4303801Z Site startup probe failed after 59.9308141 seconds.
+2025-12-23T01:38:50.6808134Z Failed to start site. Revert by stopping site.
+2025-12-23T01:38:50.7103580Z Site: songup-karaoke-eltbyspbfuopy stopped.
+2025-12-23T01:38:51.2813420Z Site: songup-karaoke-eltbyspbfuopy will be blocked for 1 minutes till 12/23/2025 01:39:51
+2025-12-23T01:38:51.8529924Z Start site prohibitted because the site is being blocked.
+2025-12-23T01:38:56.6460814Z Start site prohibitted because the site is being blocked.
+2025-12-23T01:39:01.8279768Z Start site prohibitted because the site is being blocked.
+2025-12-23T01:39:07.0574400Z Start site prohibitted because the site is being blocked.
+2025-12-23T01:39:12.2661844Z Start site prohibitted because the site is being blocked.
+2025-12-23T01:39:15.3797193Z Start site prohibitted because the site is being blocked.
+2025-12-23T01:39:15.6303116Z Start site prohibitted because the site is being blocked.
+2025-12-23T01:39:17.5965759Z Start site prohibitted because the site is being blocked.
+2025-12-23T01:39:45.5620953Z Start site prohibitted because the site is being blocked.
+2025-12-23T01:39:46.0123012Z Start site prohibitted because the site is being blocked.
+2025-12-23T01:39:50.9994469Z Start site prohibitted because the site is being blocked.
+2025-12-23T01:39:51.2888326Z Site: songup-karaoke-eltbyspbfuopy is unblocked.
+2025-12-23T01:39:59.0421936Z Container start method called.
+2025-12-23T01:39:59.0423390Z Establishing network.
+2025-12-23T01:39:59.0424303Z Pulling image: appsvc/node:22-lts_20251016.4.tuxprod.
+2025-12-23T01:39:59.7112376Z Container is starting.
+2025-12-23T01:39:59.7309489Z Establishing user namespace if not established already.
+2025-12-23T01:39:59.7499681Z Establishing network if not established already.
+2025-12-23T01:39:59.7507020Z Mounting volumes.
+2025-12-23T01:39:59.7517492Z Nested mountpoint 
+2025-12-23T01:39:59.8011428Z Nested mountpoint volatile/logs
+2025-12-23T01:39:59.8509154Z Nested mountpoint 
+2025-12-23T01:39:59.8613376Z Nested mountpoint 
+2025-12-23T01:39:59.8822034Z Nested mountpoint 
+2025-12-23T01:40:01.7625365Z Creating container.
+2025-12-23T01:40:01.7626333Z Creating pipes for streaming container io.
+2025-12-23T01:40:01.7627037Z Creating stdout named pipe at /podr/container/pipe/0dbfc9fa1f4c_songup-karaoke-eltbyspbfuopy/stdout_73b69f5da1154aa0a1272fdc56fe2d1d.
+2025-12-23T01:40:01.7647685Z Successfully created stdout named pipe at: /podr/container/pipe/0dbfc9fa1f4c_songup-karaoke-eltbyspbfuopy/stdout_73b69f5da1154aa0a1272fdc56fe2d1d.
+2025-12-23T01:40:01.8219798Z Opening named pipe /podr/container/pipe/0dbfc9fa1f4c_songup-karaoke-eltbyspbfuopy/stdout_73b69f5da1154aa0a1272fdc56fe2d1d for reading in non-blocking mode.
+2025-12-23T01:40:01.8221637Z Successfully opened named pipe: /podr/container/pipe/0dbfc9fa1f4c_songup-karaoke-eltbyspbfuopy/stdout_73b69f5da1154aa0a1272fdc56fe2d1d.
+2025-12-23T01:40:01.8222565Z Successfully removed non-blocking flag from /podr/container/pipe/0dbfc9fa1f4c_songup-karaoke-eltbyspbfuopy/stdout_73b69f5da1154aa0a1272fdc56fe2d1d.
+2025-12-23T01:40:01.8223521Z Creating stderr named pipe at /podr/container/pipe/0dbfc9fa1f4c_songup-karaoke-eltbyspbfuopy/stderr_4260f1b1dbe445859b6e48e5262fe9ec.
+2025-12-23T01:40:01.8224962Z Successfully created stderr named pipe at: /podr/container/pipe/0dbfc9fa1f4c_songup-karaoke-eltbyspbfuopy/stderr_4260f1b1dbe445859b6e48e5262fe9ec.
+2025-12-23T01:40:01.8225877Z Opening named pipe /podr/container/pipe/0dbfc9fa1f4c_songup-karaoke-eltbyspbfuopy/stderr_4260f1b1dbe445859b6e48e5262fe9ec for reading in non-blocking mode.
+2025-12-23T01:40:01.8226749Z Successfully opened named pipe: /podr/container/pipe/0dbfc9fa1f4c_songup-karaoke-eltbyspbfuopy/stderr_4260f1b1dbe445859b6e48e5262fe9ec.
+2025-12-23T01:40:01.8227559Z Successfully removed non-blocking flag from /podr/container/pipe/0dbfc9fa1f4c_songup-karaoke-eltbyspbfuopy/stderr_4260f1b1dbe445859b6e48e5262fe9ec.
+2025-12-23T01:40:01.8228477Z Creating container with image: appsvc/node:22-lts_20251016.4.tuxprod from registry: 10.1.0.6:13209 and fully qualified image name: 10.1.0.6:13209/appsvc/node:22-lts_20251016.4.tuxprod
+2025-12-23T01:40:05.9488053Z Starting container: 0dbfc9fa1f4c_songup-karaoke-eltbyspbfuopy.
+2025-12-23T01:40:06.1093270Z Starting watchers and probes.
+2025-12-23T01:40:06.1099057Z Starting metrics collection.
+2025-12-23T01:40:06.1103618Z Container is running.
+2025-12-23T01:40:06.4218250Z Container start method finished after 7377 ms.
+2025-12-23T01:40:47.8275726Z Container has finished running with exit code: 1.
+2025-12-23T01:40:47.8349768Z Container is terminating. Grace period: 5 seconds.
+2025-12-23T01:40:47.8353789Z Stop and delete container. Retry count = 0
+2025-12-23T01:40:47.8453178Z Stopping container: 0dbfc9fa1f4c_songup-karaoke-eltbyspbfuopy.
+2025-12-23T01:40:48.0069994Z Deleting container: 0dbfc9fa1f4c_songup-karaoke-eltbyspbfuopy. Retry count = 0
+2025-12-23T01:40:48.3982184Z Container spec TerminationMessagePolicy  path 
+2025-12-23T01:40:48.4066332Z Container is terminated. Total time elapsed: 563 ms.
+2025-12-23T01:40:48.4270511Z Site container: songup-karaoke-eltbyspbfuopy terminated during site startup.
+2025-12-23T01:40:48.5075218Z Site startup probe failed after 42.0538594 seconds.
+2025-12-23T01:40:48.9838854Z Failed to start site. Revert by stopping site.
+2025-12-23T01:40:48.9938786Z Site: songup-karaoke-eltbyspbfuopy stopped.

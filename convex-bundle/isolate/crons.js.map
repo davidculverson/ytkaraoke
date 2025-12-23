@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/convex/_generated/api.js", "../src/convex/crons.ts"],
+  "sourcesContent": ["/* eslint-disable */\n/**\n * Generated `api` utility.\n *\n * THIS CODE IS AUTOMATICALLY GENERATED.\n *\n * To regenerate, run `npx convex dev`.\n * @module\n */\n\nimport { anyApi, componentsGeneric } from \"convex/server\";\n\n/**\n * A utility for referencing Convex functions in your app's API.\n *\n * Usage:\n * ```js\n * const myFunctionReference = api.myModule.myFunction;\n * ```\n */\nexport const api = anyApi;\nexport const internal = anyApi;\nexport const components = componentsGeneric();\n", "import { cronJobs } from \"convex/server\"\r\nimport { internal } from \"./_generated/api\"\r\n\r\nconst crons = cronJobs()\r\n\r\ncrons.hourly(\r\n    \"clean expired rooms\",\r\n    { minuteUTC: 0 },\r\n    internal.rooms.manage.cleanExpiredRooms,\r\n)\r\n\r\nexport default crons\r\n"],
+  "mappings": ";;;;;;;AAqBO,IAAMA,IAAWC,GACXC,IAAaC,EAAkB;;;ACnB5C,IAAMC,IAAQC,EAAS;AAEvBD,EAAM;AAAA,EACF;AAAA,EACA,EAAE,WAAW,EAAE;AAAA,EACfE,EAAS,MAAM,OAAO;AAC1B;AAEA,IAAOC,IAAQH;",
+  "names": ["internal", "anyApi", "components", "componentsGeneric", "crons", "cronJobs", "internal", "crons_default"]
+}

@@ -1,0 +1,9 @@
+2025-12-23T01:22:53.2924525Z,Updating submodules.,86248af7-f590-4ff9-b3a5-42b046bb924d,0
+2025-12-23T01:22:54.7741474Z,Preparing deployment for commit id 'f93917c2-f'.,a403e461-6acf-4d35-85da-35cb2d669ed5,0
+2025-12-23T01:22:55.1250319Z,PreDeployment: context.CleanOutputPath False,df5c2ee0-51d6-4d1c-be7c-65b13d741c8c,0
+2025-12-23T01:22:55.2962138Z,PreDeployment: context.OutputPath /home/site/wwwroot,3b55ad63-5256-4eba-8fb3-3e0c2d6ab5b0,0
+2025-12-23T01:22:55.4850675Z,Skipping build. Project type: Run-From-Zip,dbe026b2-f901-427b-9762-b73f40d6d5aa,0
+2025-12-23T01:22:55.6283086Z,Skipping post build. Project type: Run-From-Zip,62955dca-38bf-497b-9087-ed2b337a95a7,0
+2025-12-23T01:22:55.7701686Z,Triggering recycle (preview mode disabled).,a0822aa4-84c9-428e-8424-f54e9049c96c,0
+2025-12-23T01:22:55.9941974Z,Updating /home/data/SitePackages/packagename.txt with deployment 20251223012247.zip,c4007729-9b4b-49b6-8c2a-6ff89923acc7,0
+2025-12-23T01:22:56.1555797Z,Deployment successful. deployer = Push-Deployer deploymentPath = ZipDeploy. Run from package.,51039fcc-3a47-498c-a7a4-d7d3a77e4fdf,0

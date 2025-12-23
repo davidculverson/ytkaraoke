@@ -1,0 +1,108 @@
+2025-12-23T01:05:31.3090157Z,Updating submodules.,0032f1bd-2b5e-43f3-a710-c2e2376f9be0,0
+2025-12-23T01:05:32.4244309Z,Preparing deployment for commit id 'e49668d7-a'.,221e8a0a-a5c5-4295-b143-44fd7957e4b6,0
+2025-12-23T01:05:32.7072688Z,PreDeployment: context.CleanOutputPath False,ec957d3a-afb2-4889-8802-7e7605e2533e,0
+2025-12-23T01:05:32.8195898Z,PreDeployment: context.OutputPath /home/site/wwwroot,246add54-42e6-42e4-87d8-6eb34ee2941c,0
+2025-12-23T01:05:33.0434786Z,Repository path is /tmp/zipdeploy/extracted,eb25bd64-d855-47b7-b3c9-19ac0a056fda,0
+2025-12-23T01:05:33.1459205Z,Running oryx build...,f28dafb4-1a9d-4b88-975c-0fd573c1c790,0
+	2025-12-23T01:05:33.1503590Z,Command: oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform nodejs --platform-version 22 -p virtualenv_name= --log-file /tmp/build-debug.log  -i /tmp/8de41bf5f3bfdb2 -p compress_node_modules=tar-gz | tee /tmp/oryx-build.log,,0
+	2025-12-23T01:05:34.2201826Z,Operation performed by Microsoft Oryx&comma; https://github.com/Microsoft/Oryx,,0
+	2025-12-23T01:05:34.2282791Z,You can report issues at https://github.com/Microsoft/Oryx/issues,,0
+	2025-12-23T01:05:34.2446598Z,,,0
+	2025-12-23T01:05:34.2515755Z,Oryx Version: 0.2.20251022.1+bef98bc7139feefaa74be16de9d835e2c85385d4&comma; Commit: bef98bc7139feefaa74be16de9d835e2c85385d4&comma; ReleaseTagName: 20251022.1,,0
+	2025-12-23T01:05:34.2594519Z,,,0
+	2025-12-23T01:05:34.2755391Z,Build Operation ID: 221bacd9b69a6422,,0
+	2025-12-23T01:05:34.2825256Z,Repository Commit : e49668d7-ac13-45d5-8cd9-a538e7e7c27e,,0
+	2025-12-23T01:05:34.2930185Z,OS Type           : bookworm,,0
+	2025-12-23T01:05:34.3032910Z,Image Type        : githubactions,,0
+	2025-12-23T01:05:34.3116176Z,,,0
+	2025-12-23T01:05:34.3218413Z,Primary SDK Storage URL: https://oryx-cdn.microsoft.io,,0
+	2025-12-23T01:05:34.3282781Z,Backup SDK Storage URL: ,,0
+	2025-12-23T01:05:34.3382420Z,Detecting platforms...,,0
+	2025-12-23T01:05:34.3473370Z,External SDK provider is enabled.,,0
+	2025-12-23T01:05:34.4176232Z,Requesting metadata for platform nodejs from external SDK provider,,0
+	2025-12-23T01:05:37.4289908Z,Requesting metadata for platform nodejs from external SDK provider,,0
+	2025-12-23T01:05:38.9127563Z,Successfully requested blob for platform nodejs&comma; blobName defaultVersion.bookworm.txt&comma; available at /var/OryxSdks/nodejs/defaultVersion.bookworm.txt,,0
+	2025-12-23T01:05:38.9692831Z,Detected following platforms:,,0
+	2025-12-23T01:05:38.9765505Z,  nodejs: 22.20.0,,0
+	2025-12-23T01:05:38.9826726Z,Requesting metadata for platform nodejs from external SDK provider,,0
+	2025-12-23T01:05:40.4665960Z,Successfully requested blob for platform nodejs&comma; blobName nodejs-bookworm-22.20.0.tar.gz&comma; available at /var/OryxSdks/nodejs/nodejs-bookworm-22.20.0.tar.gz,,0
+	2025-12-23T01:05:40.6136120Z,Version '22.20.0' of platform 'nodejs' is not installed. Generating script to install it...,,0
+	2025-12-23T01:05:40.6769242Z,Detected the following frameworks: Typescript&comma;Next.js,,0
+	2025-12-23T01:05:40.7745421Z,,,0
+	2025-12-23T01:05:40.8353158Z,Using intermediate directory '/tmp/8de41bf5f3bfdb2'.,,0
+	2025-12-23T01:05:40.8422124Z,,,0
+	2025-12-23T01:05:40.8507382Z,Copying files to the intermediate directory...,,0
+	2025-12-23T01:05:41.6521393Z,Done in 1 sec(s).,,0
+	2025-12-23T01:05:41.6641431Z,,,0
+	2025-12-23T01:05:41.6742149Z,Source directory     : /tmp/8de41bf5f3bfdb2,,0
+	2025-12-23T01:05:41.6859635Z,Destination directory: /home/site/wwwroot,,0
+	2025-12-23T01:05:41.6966743Z,,,0
+	2025-12-23T01:05:41.7039477Z,,,0
+	2025-12-23T01:05:41.7107171Z,Downloading and extracting 'nodejs' version '22.20.0' to '/tmp/oryx/platforms/nodejs/22.20.0'...,,0
+	2025-12-23T01:05:41.7197607Z,Detected image debian flavor: bookworm.,,0
+	2025-12-23T01:05:41.7303802Z,Skipping download of nodejs version 22.20.0 as it is available in external sdk provider cache...,,0
+	2025-12-23T01:05:41.7430488Z,Extracting contents...,,0
+	2025-12-23T01:05:45.0673542Z,Successfully extracted nodejs version 22.20.0 from external sdk provider cache...,,0
+	2025-12-23T01:05:45.0899266Z,Done in 4 sec(s).,,0
+	2025-12-23T01:05:45.1048561Z,,,0
+	2025-12-23T01:05:45.1744566Z,Removing existing manifest file,,0
+	2025-12-23T01:05:45.1818317Z,Creating directory for command manifest file if it does not exist,,0
+	2025-12-23T01:05:45.1913450Z,Creating a manifest file...,,0
+	2025-12-23T01:05:45.1968554Z,Node Build Command Manifest file created.,,0
+	2025-12-23T01:05:45.2070504Z,,,0
+	2025-12-23T01:05:45.2143246Z,Using Node version:,,0
+	2025-12-23T01:05:45.2237820Z,v22.20.0,,0
+	2025-12-23T01:05:45.2418140Z,,,0
+	2025-12-23T01:05:45.2503695Z,Using Npm version:,,0
+	2025-12-23T01:05:45.3582416Z,10.9.3,,0
+	2025-12-23T01:05:45.3855323Z,,,0
+	2025-12-23T01:05:45.3991020Z,Running 'npm install'...,,0
+	2025-12-23T01:05:45.4163591Z,,,0
+	2025-12-23T01:13:10.8141351Z,npm warn deprecated lucia@3.2.2: This package has been deprecated. Please see https://lucia-auth.com/lucia-v3/migrate.,,1
+	2025-12-23T01:13:29.9478283Z,npm warn deprecated next@16.0.1: This version has a security vulnerability. Please upgrade to a patched version. See https://nextjs.org/blog/CVE-2025-66478 for more details.,,1
+	2025-12-23T01:13:32.1044246Z,,,0
+	2025-12-23T01:13:32.1255117Z,added 141 packages&comma; and audited 142 packages in 8m,,0
+	2025-12-23T01:13:32.1509168Z,,,0
+	2025-12-23T01:13:32.1594833Z,19 packages are looking for funding,,0
+	2025-12-23T01:13:32.1708255Z,  run `npm fund` for details,,0
+	2025-12-23T01:13:32.1820409Z,npm notice,,1
+	2025-12-23T01:13:32.1871520Z,,,0
+	2025-12-23T01:13:32.2137655Z,npm notice New major version of npm available! 10.9.3 -> 11.7.0,,1
+	2025-12-23T01:13:32.2195901Z,1 critical severity vulnerability,,0
+	2025-12-23T01:13:32.2356757Z,npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.7.0,,1
+	2025-12-23T01:13:32.2423017Z,npm notice To update run: npm install -g npm@11.7.0,,1
+	2025-12-23T01:13:32.2517723Z,npm notice,,1
+	2025-12-23T01:13:32.2767698Z,,,0
+	2025-12-23T01:13:32.2888457Z,To address all issues&comma; run:,,0
+	2025-12-23T01:13:32.2973892Z,  npm audit fix --force,,0
+	2025-12-23T01:13:32.3156312Z,,,0
+	2025-12-23T01:13:32.3256038Z,Run `npm audit` for details.,,0
+	2025-12-23T01:13:32.3333117Z,,,0
+	2025-12-23T01:13:32.3427343Z,Running 'npm run build'...,,0
+	2025-12-23T01:13:32.3522359Z,,,0
+	2025-12-23T01:13:32.6662261Z,,,0
+	2025-12-23T01:13:32.6769292Z,> songup@0.1.0 build,,0
+	2025-12-23T01:13:32.6895281Z,> next build,,0
+	2025-12-23T01:13:32.7011773Z,,,0
+	2025-12-23T01:13:33.2007082Z,[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data&comma; please update: `npm i baseline-browser-mapping@latest -D`,,1
+	2025-12-23T01:13:34.5525029Z,Attention: Next.js now collects completely anonymous telemetry regarding usage.,,0
+	2025-12-23T01:13:34.5638159Z,This information is used to shape Next.js' roadmap and prioritize features.,,0
+	2025-12-23T01:13:34.5758968Z,You can learn more&comma; including how to opt-out if you'd not like to participate in this anonymous program&comma; by visiting the following URL:,,0
+	2025-12-23T01:13:34.5824595Z,,,1
+	2025-12-23T01:13:34.6152495Z,https://nextjs.org/telemetry,,0
+	2025-12-23T01:13:34.6241632Z,> Build error occurred,,1
+	2025-12-23T01:13:34.6311094Z,,,0
+	2025-12-23T01:13:34.6376973Z,Error: > Couldn't find any `pages` or `app` directory. Please create one under the project root,,1
+	2025-12-23T01:13:34.6610309Z,    at ignore-listed frames,,1
+	2025-12-23T01:13:35.6643848Z,npm warn deprecated lucia@3.2.2: This package has been deprecated. Please see https://lucia-auth.com/lucia-v3/migrate.\nnpm warn deprecated next@16.0.1: This version has a security vulnerability. Please upgrade to a patched version. See https://nextjs.org/blog/CVE-2025-66478 for more details.\nnpm notice\nnpm notice New major version of npm available! 10.9.3 -> 11.7.0\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v11.7.0\nnpm notice To update run: npm install -g npm@11.7.0\nnpm notice\n[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data&comma; please update: `npm i baseline-browser-mapping@latest -D`\n\n> Build error occurred\nError: > Couldn't find any `pages` or `app` directory. Please create one under the project root\n    at ignore-listed frames\n/bin/bash -c "oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform nodejs --platform-version 22 -p virtualenv_name= --log-file /tmp/build-debug.log  -i /tmp/8de41bf5f3bfdb2 -p compress_node_modules=tar-gz | tee /tmp/oryx-build.log ; exit $PIPESTATUS ",,2
+2025-12-23T01:13:36.0097605Z,,14be9954-6fd6-419c-97a2-d55e5ea50974,0
+2025-12-23T01:13:36.1305493Z,Generating summary of Oryx build,1f0ba8f0-9043-487a-831e-a6ec0b61a88f,0
+2025-12-23T01:13:36.2862569Z,Parsing the build logs,1b772e6e-e2db-45c4-83d4-2217e84aa17f,0
+2025-12-23T01:13:36.4417887Z,Found 0 issue(s),27af8ae5-c34f-4e2f-bc91-ed9018b4665a,0
+2025-12-23T01:13:36.5914488Z,,49acf415-fe76-460e-ba37-e38e7dbc61fa,0
+2025-12-23T01:13:36.7296490Z,Build Summary :,193752e6-e477-43cb-8581-fd6adb7fbde7,0
+2025-12-23T01:13:36.8676216Z,===============,36d84a65-b93d-4fb1-802a-6bc00299d7e4,0
+2025-12-23T01:13:37.0222294Z,Errors (0),08368155-2dd9-4ccd-af12-e9fe668cb328,0
+2025-12-23T01:13:37.1639284Z,Warnings (0),79d8e5b4-e1d9-4886-9bc5-53942b1603dd,0
+2025-12-23T01:13:37.4167706Z,,41dc6eff-c0e8-4d5f-85ee-9b6b3e18b89d,0
+2025-12-23T01:13:37.8430881Z,Deployment Failed. deployer = Push-Deployer deploymentPath = ZipDeploy. Extract zip. Remote build.,2eca3c3c-f240-429f-8099-8ddfe73fe943,0

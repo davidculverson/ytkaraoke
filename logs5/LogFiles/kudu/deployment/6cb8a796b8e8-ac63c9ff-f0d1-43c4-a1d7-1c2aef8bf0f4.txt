@@ -1,0 +1,7 @@
+2025-12-23T01:22:25  Fetching changes.
+2025-12-23T01:22:25    Starting  LocalZipHandler
+2025-12-23T01:22:29  Updating submodules.
+2025-12-23T01:22:29  Preparing deployment for commit id 'bc9b83ef-6'.
+2025-12-23T01:22:30  PreDeployment: context.CleanOutputPath False
+2025-12-23T01:22:30  PreDeployment: context.OutputPath /home/site/wwwroot
+2025-12-23T01:22:32  Deployment Failed. deployer = OneDeploy deploymentPath = OneDeploy

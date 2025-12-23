@@ -1,0 +1,123 @@
+<step title="Incoming Request" date="2025-12-23T01:22:22.202" instance="da4120" url="/api/publish?type=zip" method="POST" type="request" pid="831,1,17" Accept="*/*" Host="songup-karaoke-eltbyspbfuopy.scm.azurewebsites.net" User-Agent="AZURECLI/2.81.0 (MSI)" Accept-Encoding="gzip, deflate" Authorization="Bas..." Cache-Control="no-cache" Content-Type="application/octet-stream" Cookie="ARRAffinity=da4120b0cd2c3bf45e7a522fd31172e3f3306e5d97465e97afa2b8b5d3b0b609; ARRAffinitySameSite=da4120b0cd2c3bf45e7a522fd31172e3f3306e5d97465e97afa2b8b5d3b0b609" Content-Length="15048389" x-ms-client-request-id="cf3f91ef-df9d-11f0-9c4c-d36637c65265" x-ms-artifact-checksum="9449c175efaa939de448898e1b38f4efd8ef80558ba3bdbb665f2c27bfbb541a" X-ARR-LOG-ID="cf3f91ef-df9d-11f0-9c4c-d36637c65265" CLIENT-IP="1.145.116.128:1391" X-SITE-DEPLOYMENT-ID="songup-karaoke-eltbyspbfuopy" WAS-DEFAULT-HOSTNAME="songup-karaoke-eltbyspbfuopy.scm.azurewebsites.net" X-Forwarded-Proto="https" X-AppService-Proto="https" X-Forwarded-TlsVersion="1.3" X-WAWS-Unencoded-URL="/api/publish?type=zip" X-Client-IP="1.145.116.128" X-Client-Port="1391" >
+  <step title="OneDeploy" date="2025-12-23T01:22:22.334" >
+    <step title="None repository commit" date="2025-12-23T01:22:22.368" >
+      <step title="Commit id: bc9b83ef-68da-4483-b9a6-d32b346e3d51" date="2025-12-23T01:22:22.376" Message="N/A" AuthorName="N/A" AuthorEmail="N/A" /><!-- duration: 7ms -->
+    </step><!-- duration: 20ms -->
+    <step title="Starting PushDeployAsync" date="2025-12-23T01:22:22.396" /><!-- duration: 5ms -->
+    <step title="WEBSITE_RUN_FROM_PACKAGE is set to 1. Writing zip to SitePackagesPath" date="2025-12-23T01:22:22.423" /><!-- duration: 37ms -->
+    <step title="Copying zip to SitePackages /home/data/SitePackages/20251223012222.zip from request body" date="2025-12-23T01:22:22.476" /><!-- duration: 10ms -->
+    <step title="Writing multipart request body to /home/data/SitePackages/20251223012222.zip" date="2025-12-23T01:22:22.492" /><!-- duration: 7ms -->
+    <step title="Attempting to fetch target branch HEAD" date="2025-12-23T01:22:24.259" /><!-- duration: 6ms -->
+    <step title="Acquiring Deployment Lock" date="2025-12-23T01:22:24.282" /><!-- duration: 7ms -->
+    <step title="Acquired Deployment Lock" date="2025-12-23T01:22:24.363" /><!-- duration: 12ms -->
+    <step title="Performing fetch based deployment" date="2025-12-23T01:22:24.392" >
+      <step title="Creating temporary deployment" date="2025-12-23T01:22:24.399" /><!-- duration: 90ms -->
+      <step title="Releasing Deployment Lock" date="2025-12-23T01:22:25.857" /><!-- duration: 15ms -->
+      <step title="None repository commit" date="2025-12-23T01:22:26.035" >
+        <step title="Commit id: bc9b83ef-68da-4483-b9a6-d32b346e3d51" date="2025-12-23T01:22:26.048" Message="OneDeploy" AuthorName="N/A" AuthorEmail="N/A" /><!-- duration: 25ms -->
+      </step><!-- duration: 56ms -->
+      <step title="Deployment timer started" date="2025-12-23T01:22:28.103" >
+        <step title="DeploymentManager.Deploy(id:bc9b83ef-68da-4483-b9a6-d32b346e3d51)" date="2025-12-23T01:22:28.118" >
+          <step title="Collecting changeset information" date="2025-12-23T01:22:28.141" /><!-- duration: 120ms -->
+          <step title="Updating submodules" date="2025-12-23T01:22:28.277" /><!-- duration: 1280ms -->
+          <step title="Determining deployment builder" date="2025-12-23T01:22:29.969" >
+            <step title="Builder is RunFromZipSiteBuilder" date="2025-12-23T01:22:29.992" /><!-- duration: 11ms -->
+          </step><!-- duration: 43ms -->
+          <step title="PreDeployment: context.CleanOutputPath False" date="2025-12-23T01:22:30.120" >
+            <step title="PreDeployment: context.OutputPath /home/site/wwwroot" date="2025-12-23T01:22:30.291" >
+              <step title="Building" date="2025-12-23T01:22:30.506" >
+                <step title="Error occurred" date="2025-12-23T01:22:30.897" type="error" text="Could not find a part of the path &apos;/home/site/deployments/bc9b83ef-68da-4483-b9a6-d32b346e3d51/log.log&apos;." stackTrace="   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirError)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, UnixFileMode openPermissions, Int64&amp; fileLength, UnixFileMode&amp; filePermissions, Boolean failForSymlink, Boolean&amp; wasSymlink, Func`4 createOpenException)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Abstractions.FileWrapper.Open(String path, FileMode mode, FileAccess access, FileShare share)
+   at Kudu.Core.Deployment.StructuredTextDocument`1.Write(T value, Int32 depth) in /tmp/KuduLite/Kudu.Core/Deployment/StructuredTextDocument.cs:line 51
+   at Kudu.Core.Deployment.StructuredTextLogger.Log(String value, LogEntryType type) in /tmp/KuduLite/Kudu.Core/Deployment/StructuredTextLogger.cs:line 60
+   at Kudu.Core.Deployment.CascadeLogger.Log(String value, LogEntryType type) in /tmp/KuduLite/Kudu.Core/Deployment/CascadeLogger.cs:line 16
+   at Kudu.Core.Deployment.CascadeLogger.Log(String value, LogEntryType type) in /tmp/KuduLite/Kudu.Core/Deployment/CascadeLogger.cs:line 16
+   at Kudu.Core.Deployment.Generator.RunFromZipSiteBuilder.Build(DeploymentContext context, CancellationToken token) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/RunFromZipSiteBuilder.cs:line 12
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 771" /><!-- duration: 6ms -->
+                <step title="Purge deployment items" date="2025-12-23T01:22:31.334" >
+                  <step title="Remove temp-53f8, Failed, received at 12/23/2025 01:22:24" date="2025-12-23T01:22:31.401" /><!-- duration: 4ms -->
+                  <step title="Remove 93f29ed0-, Failed, received at 12/23/2025 01:16:27" date="2025-12-23T01:22:31.471" /><!-- duration: 5ms -->
+                </step><!-- duration: 145ms -->
+              </step><!-- duration: 978ms -->
+            </step><!-- duration: 1200ms -->
+            <step title="Error occurred" date="2025-12-23T01:22:31.496" type="error" text="Could not find a part of the path &apos;/home/site/deployments/bc9b83ef-68da-4483-b9a6-d32b346e3d51/log.log&apos;." stackTrace="   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirError)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, UnixFileMode openPermissions, Int64&amp; fileLength, UnixFileMode&amp; filePermissions, Boolean failForSymlink, Boolean&amp; wasSymlink, Func`4 createOpenException)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Abstractions.FileWrapper.Open(String path, FileMode mode, FileAccess access, FileShare share)
+   at Kudu.Core.Deployment.StructuredTextDocument`1.Write(T value, Int32 depth) in /tmp/KuduLite/Kudu.Core/Deployment/StructuredTextDocument.cs:line 51
+   at Kudu.Core.Deployment.StructuredTextLogger.Log(String value, LogEntryType type) in /tmp/KuduLite/Kudu.Core/Deployment/StructuredTextLogger.cs:line 60
+   at Kudu.Core.Deployment.CascadeLogger.Log(String value, LogEntryType type) in /tmp/KuduLite/Kudu.Core/Deployment/CascadeLogger.cs:line 16
+   at Kudu.Core.Deployment.CascadeLogger.Log(String value, LogEntryType type) in /tmp/KuduLite/Kudu.Core/Deployment/CascadeLogger.cs:line 16
+   at Kudu.Core.Deployment.Generator.RunFromZipSiteBuilder.Build(DeploymentContext context, CancellationToken token) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/RunFromZipSiteBuilder.cs:line 12
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 771
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 840" /><!-- duration: 5ms -->
+            <step title="Cleaning up temp files" date="2025-12-23T01:22:32.571" /><!-- duration: 5ms -->
+            <step title="Cleaning up temp files" date="2025-12-23T01:22:32.580" /><!-- duration: 505ms -->
+            <step title="Error occurred" date="2025-12-23T01:22:33.115" type="error" text="Could not find a part of the path &apos;/home/site/deployments/bc9b83ef-68da-4483-b9a6-d32b346e3d51/log.log&apos;." stackTrace="   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirError)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, UnixFileMode openPermissions, Int64&amp; fileLength, UnixFileMode&amp; filePermissions, Boolean failForSymlink, Boolean&amp; wasSymlink, Func`4 createOpenException)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Abstractions.FileWrapper.Open(String path, FileMode mode, FileAccess access, FileShare share)
+   at Kudu.Core.Deployment.StructuredTextDocument`1.Write(T value, Int32 depth) in /tmp/KuduLite/Kudu.Core/Deployment/StructuredTextDocument.cs:line 51
+   at Kudu.Core.Deployment.StructuredTextLogger.Log(String value, LogEntryType type) in /tmp/KuduLite/Kudu.Core/Deployment/StructuredTextLogger.cs:line 60
+   at Kudu.Core.Deployment.CascadeLogger.Log(String value, LogEntryType type) in /tmp/KuduLite/Kudu.Core/Deployment/CascadeLogger.cs:line 16
+   at Kudu.Core.Deployment.CascadeLogger.Log(String value, LogEntryType type) in /tmp/KuduLite/Kudu.Core/Deployment/CascadeLogger.cs:line 16
+   at Kudu.Core.Deployment.Generator.RunFromZipSiteBuilder.Build(DeploymentContext context, CancellationToken token) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/RunFromZipSiteBuilder.cs:line 12
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 771
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 840
+   at Kudu.Core.Deployment.DeploymentManager.DeployAsync(IRepository repository, ChangeSet changeSet, String deployer, Boolean clean, DeploymentInfoBase deploymentInfo, Boolean needFileUpdate, Boolean fullBuildByDefault) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 266" /><!-- duration: 5ms -->
+          </step><!-- duration: 3008ms -->
+          <step title="Reloading status file with latest updates" date="2025-12-23T01:22:33.176" >
+            <step title="WebHooksManager.PublishEventAsync: PostDeployment" date="2025-12-23T01:22:33.182" /><!-- duration: 36ms -->
+          </step><!-- duration: 45ms -->
+          <step title="Error occurred" date="2025-12-23T01:22:33.225" type="error" text="Could not find a part of the path &apos;/home/site/deployments/bc9b83ef-68da-4483-b9a6-d32b346e3d51/log.log&apos;." stackTrace="   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirError)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, UnixFileMode openPermissions, Int64&amp; fileLength, UnixFileMode&amp; filePermissions, Boolean failForSymlink, Boolean&amp; wasSymlink, Func`4 createOpenException)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Abstractions.FileWrapper.Open(String path, FileMode mode, FileAccess access, FileShare share)
+   at Kudu.Core.Deployment.StructuredTextDocument`1.Write(T value, Int32 depth) in /tmp/KuduLite/Kudu.Core/Deployment/StructuredTextDocument.cs:line 51
+   at Kudu.Core.Deployment.StructuredTextLogger.Log(String value, LogEntryType type) in /tmp/KuduLite/Kudu.Core/Deployment/StructuredTextLogger.cs:line 60
+   at Kudu.Core.Deployment.CascadeLogger.Log(String value, LogEntryType type) in /tmp/KuduLite/Kudu.Core/Deployment/CascadeLogger.cs:line 16
+   at Kudu.Core.Deployment.CascadeLogger.Log(String value, LogEntryType type) in /tmp/KuduLite/Kudu.Core/Deployment/CascadeLogger.cs:line 16
+   at Kudu.Core.Deployment.Generator.RunFromZipSiteBuilder.Build(DeploymentContext context, CancellationToken token) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/RunFromZipSiteBuilder.cs:line 12
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 771
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 840
+   at Kudu.Core.Deployment.DeploymentManager.DeployAsync(IRepository repository, ChangeSet changeSet, String deployer, Boolean clean, DeploymentInfoBase deploymentInfo, Boolean needFileUpdate, Boolean fullBuildByDefault) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 266" /><!-- duration: 4ms -->
+          <step title="Could not find status file to mark the deployment failed" date="2025-12-23T01:22:33.268" /><!-- duration: 4ms -->
+        </step><!-- duration: 5158ms -->
+      </step><!-- duration: 5177ms -->
+      <step title="Error occurred" date="2025-12-23T01:22:33.295" type="error" text="Deployment failed" stackTrace="   at Kudu.Core.Deployment.DeploymentManager.DeployAsync(IRepository repository, ChangeSet changeSet, String deployer, Boolean clean, DeploymentInfoBase deploymentInfo, Boolean needFileUpdate, Boolean fullBuildByDefault) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 307
+   at Kudu.Core.Deployment.FetchDeploymentManager.PerformDeployment(DeploymentInfoBase deploymentInfo, IDisposable tempDeployment, ChangeSet tempChangeSet, DeployStatusApiResult updateStatusObj) in /tmp/KuduLite/Kudu.Core/Deployment/FetchDeploymentManager.cs:line 230
+   at Kudu.Core.Deployment.FetchDeploymentManager.&lt;&gt;c__DisplayClass17_0.&lt;&lt;FetchDeploy&gt;b__0&gt;d.MoveNext() in /tmp/KuduLite/Kudu.Core/Deployment/FetchDeploymentManager.cs:line 131
+--- End of stack trace from previous location ---
+   at Kudu.Core.Deployment.FetchDeploymentManager.FetchDeploy(DeploymentInfoBase deployInfo, Boolean asyncRequested, Uri requestUri, String targetBranch) in /tmp/KuduLite/Kudu.Core/Deployment/FetchDeploymentManager.cs:line 124
+   at Kudu.Services.Deployment.PushDeploymentController.PushDeployAsync(ArtifactDeploymentInfo deploymentInfo, Boolean isAsync, HttpContext context, JObject requestJson) in /tmp/KuduLite/Kudu.Services/Deployment/PushDeploymentController.cs:line 802
+   at Kudu.Services.Deployment.PushDeploymentController.OneDeploy(String type, Boolean async, String path, Nullable`1 restart, Nullable`1 clean, Boolean ignoreStack, Boolean trackDeploymentProgress, Boolean trackStatus, Boolean reset) in /tmp/KuduLite/Kudu.Services/Deployment/PushDeploymentController.cs:line 624
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.&lt;InvokeActionMethodAsync&gt;g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.&lt;InvokeNextActionFilterAsync&gt;g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State&amp; next, Scope&amp; scope, Object&amp; state, Boolean&amp; isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.&lt;InvokeInnerFilterAsync&gt;g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.&lt;InvokeNextResourceFilter&gt;g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State&amp; next, Scope&amp; scope, Object&amp; state, Boolean&amp; isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.&lt;InvokeFilterPipelineAsync&gt;g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.&lt;InvokeAsync&gt;g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.&lt;InvokeAsync&gt;g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Kudu.Services.Web.Tracing.TraceMiddleware.Invoke(HttpContext context) in /tmp/KuduLite/Kudu.Services.Web/Tracing/TraceMiddleware.cs:line 101" innerText="Could not find a part of the path &apos;/home/site/deployments/bc9b83ef-68da-4483-b9a6-d32b346e3d51/log.log&apos;." innerStackTrace="   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirError)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, UnixFileMode openPermissions, Int64&amp; fileLength, UnixFileMode&amp; filePermissions, Boolean failForSymlink, Boolean&amp; wasSymlink, Func`4 createOpenException)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Abstractions.FileWrapper.Open(String path, FileMode mode, FileAccess access, FileShare share)
+   at Kudu.Core.Deployment.StructuredTextDocument`1.Write(T value, Int32 depth) in /tmp/KuduLite/Kudu.Core/Deployment/StructuredTextDocument.cs:line 51
+   at Kudu.Core.Deployment.StructuredTextLogger.Log(String value, LogEntryType type) in /tmp/KuduLite/Kudu.Core/Deployment/StructuredTextLogger.cs:line 60
+   at Kudu.Core.Deployment.CascadeLogger.Log(String value, LogEntryType type) in /tmp/KuduLite/Kudu.Core/Deployment/CascadeLogger.cs:line 16
+   at Kudu.Core.Deployment.CascadeLogger.Log(String value, LogEntryType type) in /tmp/KuduLite/Kudu.Core/Deployment/CascadeLogger.cs:line 16
+   at Kudu.Core.Deployment.Generator.RunFromZipSiteBuilder.Build(DeploymentContext context, CancellationToken token) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/RunFromZipSiteBuilder.cs:line 12
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 771
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 840
+   at Kudu.Core.Deployment.DeploymentManager.DeployAsync(IRepository repository, ChangeSet changeSet, String deployer, Boolean clean, DeploymentInfoBase deploymentInfo, Boolean needFileUpdate, Boolean fullBuildByDefault) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 266" /><!-- duration: 9ms -->
+      <step title="Incoming Request" date="2025-12-23T01:22:33.375" url="/Error?type=zip" method="POST" type="request" pid="831,1,19" Accept="*/*" Host="songup-karaoke-eltbyspbfuopy.scm.azurewebsites.net" User-Agent="AZURECLI/2.81.0 (MSI)" Accept-Encoding="gzip, deflate" Authorization="Bas..." Cache-Control="no-cache" Content-Type="application/octet-stream" Cookie="ARRAffinity=da4120b0cd2c3bf45e7a522fd31172e3f3306e5d97465e97afa2b8b5d3b0b609; ARRAffinitySameSite=da4120b0cd2c3bf45e7a522fd31172e3f3306e5d97465e97afa2b8b5d3b0b609" Content-Length="15048389" x-ms-client-request-id="cf3f91ef-df9d-11f0-9c4c-d36637c65265" x-ms-artifact-checksum="9449c175efaa939de448898e1b38f4efd8ef80558ba3bdbb665f2c27bfbb541a" X-ARR-LOG-ID="cf3f91ef-df9d-11f0-9c4c-d36637c65265" CLIENT-IP="1.145.116.128:1391" X-SITE-DEPLOYMENT-ID="songup-karaoke-eltbyspbfuopy" WAS-DEFAULT-HOSTNAME="songup-karaoke-eltbyspbfuopy.scm.azurewebsites.net" X-Forwarded-Proto="https" X-AppService-Proto="https" X-Forwarded-TlsVersion="1.3" X-WAWS-Unencoded-URL="/api/publish?type=zip" X-Client-IP="1.145.116.128" X-Client-Port="1391" >
+        <step title="Outgoing response" date="2025-12-23T01:22:33.407" type="response" statusCode="400" statusText="BadRequest" /><!-- duration: 4ms -->
+      </step><!-- duration: 45ms -->

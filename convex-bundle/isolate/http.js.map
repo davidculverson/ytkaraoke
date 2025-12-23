@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/convex/http.ts"],
+  "sourcesContent": ["import { httpRouter } from \"convex/server\"\r\nimport { auth } from \"./auth\"\r\n\r\nconst http = httpRouter()\r\n\r\nauth.addHttpRoutes(http)\r\n\r\nexport default http\r\n"],
+  "mappings": ";;;;;;;;;;AAGA,IAAMA,IAAOC,EAAW;AAExBC,EAAK,cAAcF,CAAI;AAEvB,IAAOG,IAAQH;",
+  "names": ["http", "httpRouter", "auth", "http_default"]
+}
