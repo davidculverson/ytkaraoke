@@ -74,4 +74,56 @@ export default defineSchema({
     })
         .index("by_room", ["roomId"])
         .index("by_host", ["hostUserId"]),
+
+    // Karaoke sessions for the POC queue feature
+    // Uses YouTube's native playlist feature for seamless playback
+    karaokeSessions: defineTable({
+        sessionId: v.string(),
+        // YouTube playlist ID (created via YouTube Data API)
+        youtubePlaylistId: v.optional(v.string()),
+        // Songs currently in the YouTube playlist
+        playingBatch: v.optional(v.array(
+            v.object({
+                id: v.string(),
+                videoId: v.string(),
+                title: v.string(),
+                singer: v.string(),
+                duration: v.number(),
+                addedAt: v.number(),
+                // YouTube playlist item ID (for removal)
+                playlistItemId: v.optional(v.string()),
+            })
+        )),
+        // Songs queued to be added to the next batch
+        pendingQueue: v.optional(v.array(
+            v.object({
+                id: v.string(),
+                videoId: v.string(),
+                title: v.string(),
+                singer: v.string(),
+                duration: v.number(),
+                addedAt: v.number(),
+            })
+        )),
+        // When the current batch started playing (for progress tracking)
+        batchStartedAt: v.optional(v.union(v.number(), v.null())),
+        // Total duration of current batch (sum of all song durations)
+        batchTotalDuration: v.optional(v.number()),
+        // Is a batch currently playing?
+        isPlaying: v.optional(v.boolean()),
+        createdAt: v.number(),
+        // Legacy fields (for backwards compatibility with old data)
+        queue: v.optional(v.array(
+            v.object({
+                id: v.string(),
+                videoId: v.string(),
+                title: v.string(),
+                singer: v.string(),
+                duration: v.number(),
+                addedAt: v.number(),
+            })
+        )),
+        currentIndex: v.optional(v.number()),
+        startedAt: v.optional(v.number()),
+    }).index("by_session_id", ["sessionId"]),
 })

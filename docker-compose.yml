@@ -1,0 +1,40 @@
+services:
+  app:
+    build:
+      context: .
+      args:
+        - NEXT_PUBLIC_CONVEX_URL=https://earnest-stork-764.convex.cloud
+    container_name: karaoke-app
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_CONVEX_URL=https://earnest-stork-764.convex.cloud
+    env_file:
+      - .env.local
+    networks:
+      - karaoke-network
+
+  caddy:
+    image: caddy:2-alpine
+    container_name: karaoke-caddy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - ./certs:/etc/ssl/certs:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - app
+    networks:
+      - karaoke-network
+
+networks:
+  karaoke-network:
+    driver: bridge
+
+volumes:
+  caddy_data:
+  caddy_config:

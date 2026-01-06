@@ -29,6 +29,7 @@ const nextConfig: NextConfig = {
         ],
     },
     skipTrailingSlashRedirect: true,
+    allowedDevOrigins: ["karaoke.culverson.me"],
 }
 
 export default nextConfig

@@ -34,7 +34,7 @@ test.describe("YouTube Premium OAuth Flow", () => {
     })
 
     test("callback redirects on invalid state", async ({ request }) => {
-        // Callback will redirect to /host with error - not return error status
+        // Callback will redirect to /poc/playlist with error - not return error status
         const response = await request.get("/api/youtube/callback?code=test&state=invalid", {
             maxRedirects: 0,
         })
@@ -79,14 +79,14 @@ test.describe("YouTube Playlist API", () => {
 })
 
 test.describe("YouTube Premium UI Integration", () => {
-    test("player switcher component loads on host page", async ({ page }) => {
-        await page.goto("/host")
+    test("player switcher component loads on playlist page", async ({ page }) => {
+        await page.goto("/poc/playlist")
         await page.waitForLoadState("networkidle")
         
         // Look for any YouTube-related UI elements
         const youtubeElements = page.locator("[class*='youtube'], [class*='YouTube'], [data-testid*='youtube']")
         const ytButton = page.getByRole("button", { name: /youtube/i })
-        const ytText = page.getByText(/youtube premium/i)
+        const ytText = page.getByText(/youtube/i)
         
         // Log findings
         const foundElements = await youtubeElements.count()

@@ -12,10 +12,10 @@ export const YOUTUBE_SCOPES = [
 export const GOOGLE_AUTH_URL = "https://accounts.google.com/o/oauth2/v2/auth"
 export const GOOGLE_TOKEN_URL = "https://oauth2.googleapis.com/token"
 
-export function getYouTubeConfig() {
+export function getYouTubeConfig(overrideRedirectUri?: string) {
     const clientId = process.env.YOUTUBE_CLIENT_ID
     const clientSecret = process.env.YOUTUBE_CLIENT_SECRET
-    const redirectUri =
+    const redirectUri = overrideRedirectUri ||
         process.env.YOUTUBE_REDIRECT_URI ||
         `${process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000"}/api/youtube/callback`
 
@@ -35,8 +35,8 @@ export function getYouTubeConfig() {
 /**
  * Build OAuth authorization URL
  */
-export function buildAuthUrl(state: string): string {
-    const config = getYouTubeConfig()
+export function buildAuthUrl(state: string, redirectUri?: string): string {
+    const config = getYouTubeConfig(redirectUri)
 
     const params = new URLSearchParams({
         client_id: config.clientId,
@@ -46,6 +46,7 @@ export function buildAuthUrl(state: string): string {
         access_type: "offline",
         prompt: "consent",
         state,
+        include_granted_scopes: "true",
     })
 
     return `${GOOGLE_AUTH_URL}?${params.toString()}`
@@ -54,13 +55,13 @@ export function buildAuthUrl(state: string): string {
 /**
  * Exchange authorization code for tokens
  */
-export async function exchangeCodeForTokens(code: string): Promise<{
+export async function exchangeCodeForTokens(code: string, redirectUri?: string): Promise<{
     access_token: string
     refresh_token: string
     expires_in: number
     token_type: string
 }> {
-    const config = getYouTubeConfig()
+    const config = getYouTubeConfig(redirectUri)
 
     const response = await fetch(GOOGLE_TOKEN_URL, {
         method: "POST",

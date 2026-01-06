@@ -1,19 +1,22 @@
 import { test, expect } from "@playwright/test"
 
 test.describe("Home Page", () => {
-    test("should load the home page", async ({ page }) => {
+    test("should load the home page and redirect to playlist", async ({ page }) => {
         await page.goto("/")
         
-        // Wait for page to be fully loaded
+        // Wait for redirect to complete
         await page.waitForLoadState("networkidle")
+        
+        // Should redirect to /poc/playlist
+        expect(page.url()).toContain("/poc/playlist")
         
         // Check page loads without critical errors
         const body = page.locator("body")
         await expect(body).toBeVisible()
     })
 
-    test("should display main content", async ({ page }) => {
-        await page.goto("/")
+    test("should display main content on playlist page", async ({ page }) => {
+        await page.goto("/poc/playlist")
         
         // Wait for page to be fully loaded
         await page.waitForLoadState("networkidle")
@@ -29,7 +32,7 @@ test.describe("Home Page", () => {
     })
 
     test("should be navigable", async ({ page }) => {
-        await page.goto("/")
+        await page.goto("/poc/playlist")
         await page.waitForLoadState("networkidle")
         
         // Page should respond to interactions
@@ -40,20 +43,19 @@ test.describe("Home Page", () => {
     })
 })
 
-test.describe("Host Page", () => {
-    test("should load the host page", async ({ page }) => {
-        await page.goto("/host")
+test.describe("Playlist Page", () => {
+    test("should load the playlist page", async ({ page }) => {
+        await page.goto("/poc/playlist")
         
-        // Page should load (may redirect to auth)
         await page.waitForLoadState("networkidle")
         
-        // Should be on some page
+        // Should be on the page
         const body = page.locator("body")
         await expect(body).toBeVisible()
     })
 
     test("should have interactive elements", async ({ page }) => {
-        await page.goto("/host")
+        await page.goto("/poc/playlist")
         await page.waitForLoadState("networkidle")
         
         // Should have some buttons or links
@@ -67,20 +69,5 @@ test.describe("Host Page", () => {
         
         // Should have at least some interactive element
         expect(hasButtons || hasLinks || hasInputs).toBe(true)
-    })
-})
-
-test.describe("Room Join Flow", () => {
-    test("should allow entering room code", async ({ page }) => {
-        await page.goto("/")
-        await page.waitForLoadState("networkidle")
-        
-        // Look for any text input
-        const inputs = page.getByRole("textbox")
-        
-        if (await inputs.count() > 0) {
-            await inputs.first().fill("ABCD")
-            await expect(inputs.first()).toHaveValue("ABCD")
-        }
     })
 })

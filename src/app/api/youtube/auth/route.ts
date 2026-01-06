@@ -13,6 +13,8 @@ export async function GET(request: NextRequest) {
     try {
         // Get room ID from query params (to redirect back after auth)
         const roomId = request.nextUrl.searchParams.get("roomId")
+        // Get returnUrl for POC pages that need token returned
+        const returnUrl = request.nextUrl.searchParams.get("returnUrl")
 
         // Generate CSRF state
         const state = generateState()
@@ -37,8 +39,31 @@ export async function GET(request: NextRequest) {
             })
         }
 
+        if (returnUrl) {
+            cookieStore.set("youtube_oauth_return", returnUrl, {
+                httpOnly: true,
+                secure: process.env.NODE_ENV === "production",
+                sameSite: "lax",
+                maxAge: 600,
+                path: "/",
+            })
+        }
+
+        // Get the origin from the request for dynamic redirect URI
+        const origin = request.headers.get("origin") || request.headers.get("referer")?.split("/").slice(0, 3).join("/") || "http://localhost:3000"
+        const redirectUri = `${origin}/api/youtube/callback`
+        
+        // Store the redirect URI for the callback to use
+        cookieStore.set("youtube_oauth_redirect", redirectUri, {
+            httpOnly: true,
+            secure: process.env.NODE_ENV === "production",
+            sameSite: "lax",
+            maxAge: 600,
+            path: "/",
+        })
+
         // Build authorization URL and redirect
-        const authUrl = buildAuthUrl(state)
+        const authUrl = buildAuthUrl(state, redirectUri)
 
         return NextResponse.redirect(authUrl)
     } catch (error) {

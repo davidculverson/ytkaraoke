@@ -183,24 +183,3 @@ describe("Queue Sync Rate Limiting", () => {
         expect(totalUnits).toBeLessThan(10000) // Should fit in daily quota
     })
 })
-
-describe("Queue Ordering", () => {
-    it("should prioritize user-added songs over fallback", () => {
-        const queue = [
-            { videoId: "user1", type: "addedByUser" as const },
-            { videoId: "fallback1", type: "fallback" as const },
-            { videoId: "user2", type: "addedByUser" as const },
-            { videoId: "fallback2", type: "fallback" as const },
-        ]
-
-        const sorted = [...queue].sort((a, b) => {
-            // addedByUser comes before fallback alphabetically
-            return a.type.localeCompare(b.type)
-        })
-
-        expect(sorted[0].type).toBe("addedByUser")
-        expect(sorted[1].type).toBe("addedByUser")
-        expect(sorted[2].type).toBe("fallback")
-        expect(sorted[3].type).toBe("fallback")
-    })
-})

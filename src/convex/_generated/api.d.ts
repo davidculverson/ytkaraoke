@@ -12,9 +12,8 @@ import type * as auth from "../auth.js";
 import type * as crons from "../crons.js";
 import type * as functions from "../functions.js";
 import type * as http from "../http.js";
+import type * as karaoke from "../karaoke.js";
 import type * as nicknames from "../nicknames.js";
-import type * as rooms from "../rooms.js";
-import type * as rooms_manage from "../rooms/manage.js";
 import type * as youtubePremium from "../youtubePremium.js";
 
 import type {
@@ -28,9 +27,8 @@ declare const fullApi: ApiFromModules<{
   crons: typeof crons;
   functions: typeof functions;
   http: typeof http;
+  karaoke: typeof karaoke;
   nicknames: typeof nicknames;
-  rooms: typeof rooms;
-  "rooms/manage": typeof rooms_manage;
   youtubePremium: typeof youtubePremium;
 }>;
 

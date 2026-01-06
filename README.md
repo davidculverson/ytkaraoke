@@ -1,68 +1,182 @@
-# SongUp
+# SongUp Karaoke
 
-[![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)](https://songup.tv/discord)
-
-SongUp makes queuing songs from everyone easier and fairer than ever. 🎵
-
-Host a room for free at [songup.tv](https://songup.tv)!
-
-<img width="2656" height="1511" alt="songup-host" src="https://github.com/user-attachments/assets/fabd4b36-887e-4406-9cc9-47c7c1b5b122" />
-
+A self-hosted, open-source karaoke queue management system with YouTube integration.
 
 ## 🎉 What is SongUp?
 
-SongUp is an open-source, privacy-friendly music queue system. Hosts can control a central screen while everyone else contributes to the playlist simply by scanning a QR code. No logins, no hassle, just music.
+SongUp is a collaborative karaoke queue system that allows hosts to manage a central display while participants add songs to the queue. Perfect for parties, karaoke nights, and events.
 
-## Features
+## ✨ Features
 
-- **🔓 No Logins Required**
-  Host and users can use SongUp without creating an account.
+- **🎵 YouTube Integration**
+  Direct integration with YouTube for video playback and automatic playlist management.
 
-- **💸 Free for Everyone**
-  SongUp is completely free to use.
+- **🔓 Anonymous Access**
+  No login required for basic participation - just enter a room code and start adding songs.
 
-- **📺 Perfect for Large Screens**
-  A dedicated host mode designed for TV or laptop screens.
-  (Works flawlessly on mobile too.)
+- **📺 Dual Display Modes**
+  - **Display Mode**: Full-screen view for TVs/projectors showing current and upcoming songs
+  - **Controller Mode**: Queue management interface for hosts and participants
 
-- **2️⃣ Queue Management**
-  Hosts can choose how many songs people can add to the queue at once.
-  
-- **🎶 Never Silence**
-  When creating a room, hosts can choose a fallback playlist that will play when no one has added a song to the queue, while
-  songs that users add will always have priority over fallback songs.
+- **🎤 Smart Queue Management**
+  - Set maximum songs per user
+  - Real-time queue updates across all devices
+  - Automatic YouTube playlist synchronization
 
-## 🎯 Get Started
+- **📱 Mobile Friendly**
+  Responsive design works on phones, tablets, and desktops.
 
-### 1. Create a Room
+- **🔐 Optional YouTube OAuth**
+  Connect your YouTube account for enhanced playlist management and Premium playback benefits.
 
-Head over to [songup.tv](https://songup.tv) and click **Host your own room** to host your own SongUp room. It’s quick, easy, and free.
+## 🚀 Quick Start
 
-### 2. Share the Code
+### Prerequisites
 
-Share the unique room code with your friends or display the QR code on the host screen.
+- Node.js 22.x
+- Bun package manager
+- Convex account (backend)
+- YouTube Data API credentials (optional, for playlist features)
 
-### 3. Queue Songs
+### Environment Setup
 
-Your guests can join the room and start adding their favorite tracks. Enjoy the party!
+Create a `.env.local` file:
 
-## 🤝 Contributing
+```env
+# Convex Backend
+CONVEX_DEPLOYMENT=your-deployment-url
+NEXT_PUBLIC_CONVEX_URL=https://your-deployment.convex.cloud
 
-SongUp is open source and thrives on community contributions. Here’s how you can help:
+# YouTube Data API (optional)
+YOUTUBE_CLIENT_ID=your-client-id
+YOUTUBE_CLIENT_SECRET=your-client-secret
+YOUTUBE_API_KEY=your-api-key
 
-- Look through existing issues, issues that are easy for first-time-contributors are labeled [`good-first-issue`](https://github.com/motz0815/songup/labels/good%20first%20issue)
+# Base URL
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+```
 
-Then:
+### Development
 
-1. Fork the repository
-2. Create a branch from `develop` e.g. `feature/new-cool-thing`
-3. Commit & Push changes to your branch
-4. Open a pull request
+```bash
+# Install dependencies
+bun install
+
+# Start Convex backend and Next.js dev server
+bun run dev
+
+# Run tests
+bun run test
+
+# Run e2e tests
+bun run test:e2e
+```
+
+### Production Deployment
+
+#### Docker Deployment
+
+```bash
+# Build and run with Docker Compose
+docker-compose up -d --build
+```
+
+#### Manual Deployment
+
+```bash
+# Build the application
+bun run build
+
+# Start production server
+bun run start
+```
+
+The app will be available on port 3000.
+
+## 📖 Usage
+
+### For Hosts
+
+1. Navigate to `/poc/playlist`
+2. Create a new session with a unique room code
+3. Share the room code with participants
+4. Optionally connect YouTube account for automatic playlist management
+5. Use Display Mode on your main screen
+6. Manage queue from Controller Mode
+
+### For Participants
+
+1. Enter the room code
+2. Browse or search for songs
+3. Add songs to the queue (subject to per-user limits set by host)
+4. See your position in the queue in real-time
+
+## 🏗️ Architecture
+
+- **Frontend**: Next.js 16 with React 19
+- **Backend**: Convex (serverless)
+- **Authentication**: Convex Auth with anonymous support
+- **Video**: YouTube Data API v3
+- **Styling**: Tailwind CSS with shadcn/ui
+- **Testing**: Vitest + Playwright
+
+## 📁 Project Structure
+
+```
+├── src/
+│   ├── app/              # Next.js app router pages
+│   ├── components/       # Reusable React components
+│   ├── convex/          # Convex backend functions
+│   ├── features/        # Feature-specific code
+│   └── lib/             # Utilities and helpers
+├── tests/               # Test files
+├── public/              # Static assets
+└── infra/              # Infrastructure as code (Azure Bicep)
+```
+
+## 🧪 Testing
+
+```bash
+# Unit tests
+bun run test
+
+# E2E tests
+bun run test:e2e
+
+# Watch mode
+bun run test:watch
+```
+
+## 🐳 Docker Support
+
+The application includes Docker configuration for containerized deployment:
+
+- **Dockerfile**: Multi-stage build optimized for production
+- **docker-compose.yml**: Includes app + Caddy reverse proxy
+- **Caddyfile**: Automatic HTTPS configuration
+
+## 🔧 Configuration
+
+### YouTube Integration
+
+To enable YouTube features:
+
+1. Create a project in [Google Cloud Console](https://console.cloud.google.com)
+2. Enable YouTube Data API v3
+3. Create OAuth 2.0 credentials
+4. Add authorized redirect URIs
+5. Add credentials to `.env.local`
+
+### Convex Setup
+
+1. Install Convex CLI: `bun add -g convex`
+2. Run `bunx convex dev` to set up your backend
+3. Deploy schema and functions automatically
 
 ## 📜 License
 
 This project is licensed under the [AGPL-3.0 License](https://www.gnu.org/licenses/agpl-3.0.html).
 
-## ❤️ Support
+## 🙏 Acknowledgments
 
-If you love SongUp, consider starring the repository or sharing it with your friends! Feedback and suggestions are always welcome.
+Built with Next.js, Convex, and YouTube Data API.

@@ -14,10 +14,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
     metadataBase: new URL(getURL()),
-    title: { default: "SongUp", template: "%s | SongUp" },
+    title: { default: "YouTube Karaoke", template: "%s | YouTube Karaoke" },
     description:
-        "SongUp makes collaborative party music queueing easy. Open source, no login required. Get started - free.",
-    keywords: ["songup", "party", "music", "queue", "open source"],
+        "YouTube Karaoke - A playlist-based karaoke queue system using YouTube Premium.",
+    keywords: ["karaoke", "youtube", "playlist", "music", "queue"],
 }
 
 export default function RootLayout({

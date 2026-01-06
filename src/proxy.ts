@@ -9,6 +9,10 @@ export default convexAuthNextjsMiddleware((request, { convexAuth }) => {}, {
 
 export const config = {
     // The following matcher runs middleware on all routes
-    // except static assets.
-    matcher: ["/((?!.*\\..*|_next).*)", "/", "/(api|trpc)(.*)"],
+    // except static assets and YouTube OAuth callback (which handles its own auth)
+    matcher: [
+        "/((?!.*\\..*|_next|api/youtube/callback).*)",
+        "/",
+        "/(api(?!/youtube/callback)|trpc)(.*)",
+    ],
 }

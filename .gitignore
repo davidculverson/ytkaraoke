@@ -50,3 +50,6 @@ next-env.d.ts
 .deployment-info.json
 deploy-package.zip
 api-deploy.zip
+
+# YouTube API cache
+/.cache/

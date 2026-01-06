@@ -1,12 +1,13 @@
 import { cronJobs } from "convex/server"
-import { internal } from "./_generated/api"
 
 const crons = cronJobs()
 
-crons.hourly(
-    "clean expired rooms",
-    { minuteUTC: 0 },
-    internal.rooms.manage.cleanExpiredRooms,
-)
+// Cron jobs can be added here as needed
+// For example, to clean up expired karaoke sessions:
+// crons.hourly(
+//     "clean expired sessions",
+//     { minuteUTC: 0 },
+//     internal.karaoke.cleanExpiredSessions,
+// )
 
 export default crons
